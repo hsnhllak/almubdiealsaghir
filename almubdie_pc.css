@@ -1,0 +1,164 @@
+@charset "utf-8";
+/* CSS Document */
+html{
+	background-image:url("images/main_bg.jpg");
+	background-size: cover;
+	height: 100%;
+}
+body {
+	height: 95%;
+}
+* {
+  box-sizing: border-box;
+}
+div{
+	padding: 0;
+	margin: 0;
+}
+.divlistandimg{
+	width: 100% ;
+	height: 25%;
+}
+.divhead{
+	width: 100%;
+	height: 7%;
+}
+.btnhead{
+	display: inline-block;
+	float: right;
+	height: 100%;
+	width: 10%;
+	position: relative;
+	right: 5px;
+	margin-right: 15px;
+	font-size: 1.5vw;
+	font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	border: none;
+	border-radius: 5px;
+}
+.btnhead:hover {
+	background-color: darkgray !important;
+}
+.divlist{
+	position: relative;
+  	z-index: 2;
+	width: 100%;
+	height: 35%;
+}
+.btnlist{
+	display: inline-block;
+	float: right;
+	height: 100%;
+	width: 14%;
+	font-size: 1.5vw;
+	font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	border: none;
+	border-radius: 5px;
+	color:#035590;
+}
+.btnlist:hover {
+	background-color: darkgray !important;
+}
+.divlistimg{
+	
+	position: relative;
+  	z-index: 3;
+  	width: 100%;
+	
+	display: inline-block;
+	float: right;
+	top:20px;
+}
+.imglist{
+	
+	
+	height: 15vh; /* ارتفاع الصورة يملأ الشاشة بالكامل */
+  
+  object-fit: fill; /* يملأ الإطار حتى لو تشوهت الصورة */
+
+	width: 14%;
+	
+	display: inline-block;
+	float: right;
+}
+.imghead{
+	width: 10%;
+}
+
+.besat{
+	position: absolute ; 
+	top: 50%; right: 2vw; 
+	width: 25%;
+}
+.maemona{
+	position: absolute ;
+	top: 40%; left: 2vw;
+	width: 35% ;
+}
+
+@media (max-width: 1024px) {
+    .btnhead{
+	display:block;
+	
+	height: 40%;
+	width: 100%;
+	margin-right:auto;
+	font-size: 1.5vw;
+	font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	border: none;
+	border-radius: 5px;
+}
+	.imghead{
+		position: absolute ; 
+		top: 1%; 
+		left: 1vw;
+		width: 15% ;
+}
+	.imglist{
+	
+	
+	display:none;
+	
+}
+	
+	.btnlist{
+		
+	
+		
+		
+	display:block;
+	height: 10%;
+	width: 100%;
+	margin: auto;
+	
+	font-size: 4vw;
+	font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	border: none;
+	border-radius: 5px;
+	color:#035590;
+}
+	.divlistandimg{
+		
+	width: 100% ;
+	height: 75%;
+}
+	.divlist{
+	
+	width: 100%;
+	height: 100%;
+	
+}
+	
+	.besat{
+	position: absolute ; 
+	top: 75%; 
+	right: 2vw; 
+	width: 25%;
+}
+.maemona{
+	position: absolute ;
+	top: 65%; 
+	left: 2vw;
+	width: 35% ;
+}
+}
