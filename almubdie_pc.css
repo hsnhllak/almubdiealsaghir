@@ -5,20 +5,15 @@ html{
 	background-size: cover;
 	height: 100%;
 }
-body {
-	height: 95%;
+
+
+.container {
+    display: flex;
+    justify-content: center; /* توسيط الـ div المحدد أفقيًا */
+    align-items: center; /* توسيط عمودي (اختياري) */
 }
-* {
-  box-sizing: border-box;
-}
-div{
-	padding: 0;
-	margin: 0;
-}
-.divlistandimg{
-	width: 100% ;
-	height: 25%;
-}
+body {	height: 95%;}
+* {  box-sizing: border-box;}
 .divhead{
 	width: 100%;
 	height: 7%;
@@ -39,11 +34,46 @@ div{
 .btnhead:hover {
 	background-color: darkgray !important;
 }
-.divlist{
+.imghead{
+	width: 10%;
+	float: left;
+}
+
+.divlistandimg{
+	width: 100% ;
+	height: 25%;
+	position: relative;
+}
+
+.divlistimg{	
+	display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
 	position: relative;
   	z-index: 2;
+	flex-direction: row; /* التأكد من أن الاتجاه أفقي (row) */
+    direction: rtl;
+}
+.imglist{
+	height: 15vh; 
+  	object-fit: fill; 
+	width: 14%;
+	display: inline-block;
+	float: right;
+}
+.imglist:hover{
+	opacity: 0.5;
+}
+
+.divlist{
+	position: relative;
+  	z-index: 1;
 	width: 100%;
 	height: 35%;
+	top: -25px;
 }
 .btnlist{
 	display: inline-block;
@@ -59,31 +89,60 @@ div{
 .btnlist:hover {
 	background-color: darkgray !important;
 }
-.divlistimg{
-	
-	position: relative;
-  	z-index: 3;
-  	width: 100%;
-	
-	display: inline-block;
-	float: right;
-	top:20px;
-}
-.imglist{
-	
-	
-	height: 15vh; /* ارتفاع الصورة يملأ الشاشة بالكامل */
-  
-  object-fit: fill; /* يملأ الإطار حتى لو تشوهت الصورة */
 
-	width: 14%;
-	
+.divlistandimg1{
+	width: 35% ;
+	height: 25%;
+	position: relative;
+	margin: auto;
+}
+
+
+.divlistimg1{	
+	display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+	position: relative;
+  	z-index: 2;
+	flex-direction: row; /* التأكد من أن الاتجاه أفقي (row) */
+    direction: rtl;
+}
+.imglist1{
+	height: 15vh; 
+  	object-fit: fill; 
+	width: 50%;
 	display: inline-block;
 	float: right;
 }
-.imghead{
-	width: 10%;
+.imglist1:hover{
+	opacity: 0.5;
 }
+
+.divlist1{
+	position: relative;
+  	z-index: 1;
+	width: 100%;
+	height: 35%;
+	top: -25px;
+}
+.btnlist1{
+	display: inline-block;
+	float: right;
+	height: 100%;
+	width: 50%;
+	font-size: 1.5vw;
+	font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	border: none;
+	border-radius: 5px;
+	color:#035590;
+}
+.btnlist1:hover {
+	background-color: darkgray !important;
+}
+
 
 .besat{
 	position: absolute ; 
@@ -92,11 +151,111 @@ div{
 }
 .maemona{
 	position: absolute ;
-	top: 40%; left: 2vw;
-	width: 35% ;
+	top: 34%; left: 2vw;
+	width: 30% ;
 }
 
+
+
 @media (max-width: 1024px) {
+ 	.btnhead{
+	display:block;
+	height: 50%;
+	width: 100%;
+	margin-right:auto;
+	font-size: 2vw;
+	font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	border: none;
+	border-radius: 5px;
+}
+	.imghead{
+		position: absolute ; 
+		top: 1%; 
+		left: 1vw;
+		width: 15% ;
+}
+	.divlistandimg{
+	
+	height: 55%;
+	position: relative;
+	width: 95%;
+	margin: auto;
+	
+}
+
+	.imglist{
+	display:none;
+}
+	.btnlist{
+	display:block;
+	height: 42%;
+	width: 100%;
+	margin: auto;
+	
+	font-size: 4vw;
+	font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	border: none;
+	border-radius: 5px;
+	color:#035590;
+}
+	.divlistandimg1{
+		position:relative;
+		
+		top: 0;
+	width: 35% ;
+	height: 20%;
+		
+		
+}
+
+	
+	
+.imglist1{
+	
+	display:none;
+	
+}
+.divlist1{
+	
+	width: 100%;
+	height: 100%;
+	position: relative;
+		top: 0;
+	
+}
+.btnlist1{
+	display:block;
+	
+	height: 50%;
+	width: 100%;
+	font-size: 4vw;
+	font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	border: none;
+	border-radius: 5px;
+	color:#035590;
+}
+.btnlist1:hover {
+	background-color: darkgray !important;
+}
+
+	.besat{
+	position: absolute ; 
+	top: 75%; 
+	right: 2vw; 
+	width: 25%;
+}
+.maemona{
+	position: absolute ;
+	top: 65%; 
+	left: 2vw;
+	width: 35% ;
+}
+}
+
+@media (min-width: 600px) and (max-width: 1024px) and (orientation: landscape) {
+	body{
+		height: 250%;
+	}
     .btnhead{
 	display:block;
 	
@@ -120,12 +279,7 @@ div{
 	display:none;
 	
 }
-	
 	.btnlist{
-		
-	
-		
-		
 	display:block;
 	height: 10%;
 	width: 100%;
@@ -145,19 +299,18 @@ div{
 	.divlist{
 	
 	width: 100%;
-	height: 100%;
+	height: 75%;
 	
 }
-	
 	.besat{
 	position: absolute ; 
-	top: 75%; 
+	top: 130%; 
 	right: 2vw; 
 	width: 25%;
 }
 .maemona{
 	position: absolute ;
-	top: 65%; 
+	top: 133%; 
 	left: 2vw;
 	width: 35% ;
 }
