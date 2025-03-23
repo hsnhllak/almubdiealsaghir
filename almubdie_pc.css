@@ -1,13 +1,42 @@
 @charset "utf-8";
 /* CSS Document */
 html{
-	background-image:url("images/main_bg.jpg");
-	background-size: cover;
+	
 	height: 100%;
 }
 
-body {	height: 95%;}
+body {	height: 98%;}
 * {  box-sizing: border-box;}
+.divbody{
+	background: #E9EFAC;
+	height: 48vw;
+	border: thin dotted #E71317;
+	padding: 0;
+	background-image:url("images/main_bg.jpg");
+	background-size: cover;
+	margin: 0;
+	
+}
+.divbody1{
+	background: #E9EFAC;
+	height: 35vw;
+	border: thin dotted #E71317;
+	padding: 0;
+	padding-bottom: 5%;
+	background: #E7F0B6;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	
+}
+.divbody1 h1{
+	font-size: 2vw;
+	text-align: center;
+	text-decoration: underline;
+	text-decoration-color:#07C011;
+	color: #2C0EED;
+}
 .divhead{
 	width: 100%;
 	height: 7%;
@@ -141,8 +170,43 @@ body {	height: 95%;}
 	width: 30% ;
 }
 
+.divbot1{
+	position: relative;
+  	
+	width: 100%;
+	height: 25%;
+	
+	display: flex;
+  justify-content: space-between; /* يوزع العناصر على الجانبين */
+  align-items: center; /* يمركز العناصر عموديًا */
+ 
+  padding: 5px;
+	padding-left: 40px;
+	padding-right: 40px;
+	
+}
+.btndiv1{
+	display: inline-block;
+	float: right;
+	height: 100%;
+	width: 25%;
+	font-size: 1.5vw;
+	font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	border: none;
+	border-radius: 5px;
+	color:#035590;
+	background: #BCC707;
+	border: thin solid  #0B9F09;
+}
+.btndiv1:hover{background-color: darkgray !important;}
 
-
+.footer{
+	position: relative;
+	bottom: 0;
+	height: 10%;
+	border: thin dotted #6F2022;
+	
+}
 
 @media (max-width: 1024px) {
  	.btnhead{
