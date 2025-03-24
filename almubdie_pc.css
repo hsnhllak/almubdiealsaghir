@@ -23,7 +23,6 @@ body {	height: 98%;}
 	border: thin dotted #E71317;
 	padding: 0;
 	padding-bottom: 5%;
-	background: #E7F0B6;
 	margin: 0;
 	display: flex;
 	flex-direction: column;
@@ -205,10 +204,26 @@ body {	height: 98%;}
 	bottom: 0;
 	height: 10%;
 	border: thin dotted #6F2022;
+	display: flex;
+  justify-content: space-between; /* يوزع العناصر على الجانبين */
+  align-items: center; /* يمركز العناصر عموديًا */
+	padding-left: 4%;
+	padding-right: 4%;
 	
 }
 
 @media (max-width: 1024px) {
+	.divbody{
+	background: #E9EFAC;
+	height: 100vh;
+	border: thin dotted #E71317;
+	padding: 0;
+	background-image:url("images/main_bg.jpg");
+	background-size: cover;
+	margin: 0;
+	
+}
+	
  	.btnhead{
 	display:block;
 	height: 50%;
@@ -283,15 +298,84 @@ body {	height: 98%;}
 }
 .maemona{
 	position: absolute ;
-	top: 65%; 
+	top: 75%; 
 	left: 2%;
 	width: 35% ;
 }
+	.divbody1{
+	background: #E9EFAC;
+	height: 35vw;
+	border: thin dotted #E71317;
+	padding: 0;
+	padding-bottom: 5%;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+		width: 100%;
+	
+}
+	.divbot1{
+	position: relative;
+  	
+	width: 100%;
+	height: 25%;
+	
+	display: flex;
+  justify-content: space-between; /* يوزع العناصر على الجانبين */
+  align-items: center; /* يمركز العناصر عموديًا */
+ 
+  padding: 5px;
+	padding-left: 40px;
+	padding-right: 40px;
+	
+}
+.btndiv1{
+	display: inline-block;
+	float: right;
+	height: 100%;
+	width: 25%;
+	font-size: 1.5vw;
+	font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	border: none;
+	border-radius: 5px;
+	color:#035590;
+	background: #BCC707;
+	border: thin solid  #0B9F09;
+}
+.btndiv1:hover{background-color: darkgray !important;}
+
+.footer{
+	position: relative;
+	bottom: 0;
+	height: 10%;
+	width: 100%
+	border: thin dotted #6F2022;
+	display:block;
+  
+  text-align: center; /* يمركز العناصر عموديًا */
+ 
+}
+	a{
+		margin: auto;
+	}
+
 }
 @media (min-width: 600px) and (max-width: 1024px) and (orientation: landscape) {
 body{
 	height: 250%;
 }
+	.divbody{
+	background: #E9EFAC;
+	height: 190vh;
+	border: thin dotted #E71317;
+	padding: 0;
+	background-image:url("images/main_bg.jpg");
+	background-size: cover;
+	margin: 0;
+	
+}
+	
 .btnhead{
 	display:block;	
 	height: 40%;
@@ -339,7 +423,7 @@ body{
 	}
 .maemona{
 	position: absolute ;
-	top: 125%; 
+	top: 105%; 
 	left: 2vw;
 	width: 35% ;
 	}
@@ -371,4 +455,42 @@ body{
 .btnlist1:hover {
 	background-color: darkgray !important;
 }
+	.divbot1{
+	position: relative;
+  	
+	width: 100%;
+	height: 25%;
+	
+	display: flex;
+  justify-content: space-between; /* يوزع العناصر على الجانبين */
+  align-items: center; /* يمركز العناصر عموديًا */
+ 
+  padding: 5px;
+	padding-left: 40px;
+	padding-right: 40px;
+	
+}
+.btndiv1{
+	display: inline-block;
+	float: right;
+	height: 100%;
+	width: 25%;
+	font-size: 1.5vw;
+	font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	border: none;
+	border-radius: 5px;
+	color:#035590;
+	background: #BCC707;
+	border: thin solid  #0B9F09;
+}
+.btndiv1:hover{background-color: darkgray !important;}
+
+.footer{
+	position: relative;
+	bottom: 0;
+	height: 10%;
+	border: thin dotted #6F2022;
+	
+}
+
 }
