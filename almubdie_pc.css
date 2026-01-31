@@ -3,70 +3,65 @@
 
 body {
     font-family: "Lucida Grande", Verdana, sans-serif;
-    background-color: #E9EFAC;
+    background-color: #F0F5F9;
     line-height: 1.5;
 }
 
 /* Header */
 .site-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: #5E0C96;
+    color: yellow;
+    text-align: center;
     padding: 1rem;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .site-header .logo { width: 120px; margin-bottom: 10px; }
 
+.site-header nav {
+    margin: 10px 0;
+}
+
 .site-header nav a {
     margin: 5px;
     padding: 0.5rem 1rem;
-    background-color: #5E0C96;
-    color: yellow;
+    background-color: #78CB0B;
+    color: #fff;
     text-decoration: none;
     border-radius: 5px;
     transition: all 0.3s;
 }
 
-.site-header nav a:hover { background-color: #3C0B94; }
+.site-header nav a:hover { background-color: #5AA800; }
 
-.site-header p { margin-top: 10px; font-weight: bold; }
+.site-header p { font-weight: bold; }
 
-/* Feature Icons */
-.feature-icons {
+/* Cards Section */
+.cards-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
     padding: 2rem;
-    justify-items: center;
-    align-items: center;
 }
 
-.feature-icons img { width: 100px; transition: transform 0.3s; }
-.feature-icons img:hover { transform: scale(1.1); }
-
-.feature-icons button {
-    margin-top: 5px;
-    padding: 0.5rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #78CB0B;
-    color: #fff;
-    cursor: pointer;
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.feature-icons button:hover { background-color: #5AA800; }
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
 
-/* Sections */
-.info-section { padding: 2rem; text-align: center; }
+.card img { width: 100px; margin-bottom: 10px; }
 
-.info-section h2 {
-    font-size: 1.8rem;
-    color: #2C0EED;
-    text-decoration: underline;
-    text-decoration-color: #07C011;
-    margin-bottom: 1rem;
+.card h3 {
+    color: #3C0B94;
+    margin-bottom: 10px;
 }
 
 .btn-group {
@@ -77,7 +72,7 @@ body {
 }
 
 .btn-group button {
-    padding: 0.8rem 1.2rem;
+    padding: 0.5rem 1rem;
     border-radius: 5px;
     border: 1px solid #0B9F09;
     background-color: #BCC707;
@@ -85,21 +80,27 @@ body {
     transition: all 0.3s;
 }
 
-.btn-group button:hover { background-color: darkgray; }
+.btn-group button:hover { background-color: #5AA800; color: #fff; }
 
 /* Footer */
 footer {
-    background-color: #fff;
-    padding: 1rem;
+    background-color: #3C0B94;
+    color: yellow;
     text-align: center;
-    border-top: 2px solid #1A0583;
+    padding: 1rem;
 }
 
-footer a { display: block; margin: 5px; color: #333; text-decoration: none; }
-footer a:hover { color: #5E0C96; }
+footer a {
+    display: block;
+    margin: 5px;
+    color: yellow;
+    text-decoration: none;
+}
+
+footer a:hover { color: #BCC707; }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .feature-icons { grid-template-columns: repeat(2, 1fr); }
+    .cards-section { grid-template-columns: 1fr; }
     .btn-group { flex-direction: column; }
 }
