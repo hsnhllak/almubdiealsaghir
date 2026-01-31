@@ -7,23 +7,27 @@ body {
     line-height: 1.5;
 }
 
-/* Header */
+/* ===== الترويسة ===== */
 .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
     background-color: #5E0C96;
     color: yellow;
-    text-align: center;
-    padding: 1rem;
 }
 
-.site-header .logo { width: 120px; margin-bottom: 10px; }
-
-.site-header nav {
-    margin: 10px 0;
+.header-left .logo {
+    width: 150px;
 }
 
-.site-header nav a {
-    margin: 5px;
-    padding: 0.5rem 1rem;
+.header-right nav {
+    margin-bottom: 5px;
+}
+
+.header-right nav a {
+    margin-left: 10px;
+    padding: 5px 12px;
     background-color: #78CB0B;
     color: #fff;
     text-decoration: none;
@@ -31,11 +35,13 @@ body {
     transition: all 0.3s;
 }
 
-.site-header nav a:hover { background-color: #5AA800; }
+.header-right nav a:hover { background-color: #5AA800; }
 
-.site-header p { font-weight: bold; }
+.header-right p {
+    font-weight: bold;
+}
 
-/* Cards Section */
+/* ===== Cards Section ===== */
 .cards-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -43,7 +49,8 @@ body {
     padding: 2rem;
 }
 
-.card {
+/* بطاقات عامة */
+.card { 
     background-color: #fff;
     border-radius: 10px;
     padding: 1rem;
@@ -58,29 +65,26 @@ body {
 }
 
 .card img { width: 100px; margin-bottom: 10px; }
+.card h3 { margin-bottom: 10px; }
 
-.card h3 {
-    color: #3C0B94;
-    margin-bottom: 10px;
-}
+/* ألوان مميزة لكل بطاقة */
+.stages-card { border-top: 5px solid #F4D03F; }
+.songs-card { border-top: 5px solid #9B59B6; }
+.games-card { border-top: 5px solid #1ABC9C; }
+.innovation-card { border-top: 5px solid #E67E22; }
+.releases-card { border-top: 5px solid #3498DB; }
+.online-card { border-top: 5px solid #E74C3C; }
 
-.btn-group {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
+/* أزرار البطاقات بألوان مختلفة */
+.stages-card .btn-group button { background-color: #F4D03F; color: #000; border: 1px solid #F1C40F; }
+.songs-card .btn-group button { background-color: #9B59B6; color: #fff; border: 1px solid #8E44AD; }
+.games-card .btn-group button { background-color: #1ABC9C; color: #fff; border: 1px solid #16A085; }
+.innovation-card .btn-group button { background-color: #E67E22; color: #fff; border: 1px solid #D35400; }
+.releases-card .btn-group button { background-color: #3498DB; color: #fff; border: 1px solid #2980B9; }
+.online-card .btn-group button { background-color: #E74C3C; color: #fff; border: 1px solid #C0392B; }
 
-.btn-group button {
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    border: 1px solid #0B9F09;
-    background-color: #BCC707;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.btn-group button:hover { background-color: #5AA800; color: #fff; }
+/* Hover على الأزرار */
+.btn-group button:hover { transform: scale(1.05); opacity: 0.85; cursor: pointer; }
 
 /* Footer */
 footer {
@@ -99,8 +103,10 @@ footer a {
 
 footer a:hover { color: #BCC707; }
 
-/* Responsive */
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
+    .site-header { flex-direction: column; text-align: center; }
+    .header-left .logo { margin-bottom: 10px; }
     .cards-section { grid-template-columns: 1fr; }
     .btn-group { flex-direction: column; }
 }
