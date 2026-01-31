@@ -1,24 +1,24 @@
 /* Reset */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { margin:0; padding:0; box-sizing:border-box; }
 
 body {
     font-family: "Lucida Grande", Verdana, sans-serif;
     background-color: #F0F5F9;
-    line-height: 1.5;
+    line-height:1.5;
 }
 
 /* ===== الترويسة ===== */
 .site-header {
-    display: flex;
+    display:flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
+    align-items:center;
+    padding:10px 20px;
     background-color: #5E0C96;
     color: yellow;
 }
 
 .header-left .logo {
-    width: 150px;
+    width: 180px; /* أكبر من النسخة السابقة */
 }
 
 .header-right nav {
@@ -27,86 +27,109 @@ body {
 
 .header-right nav a {
     margin-left: 10px;
-    padding: 5px 12px;
+    padding: 10px 18px; /* أكبر */
     background-color: #78CB0B;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 1.2rem;
     transition: all 0.3s;
 }
 
 .header-right nav a:hover { background-color: #5AA800; }
 
 .header-right p {
-    font-weight: bold;
+    font-weight:bold;
+    font-size: 1.1rem;
 }
 
 /* ===== Cards Section ===== */
 .cards-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 25px;
     padding: 2rem;
 }
 
 /* بطاقات عامة */
 .card { 
     background-color: #fff;
-    border-radius: 10px;
-    padding: 1rem;
+    border-radius: 12px;
+    padding: 1.5rem;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 18px rgba(0,0,0,0.25);
 }
 
-.card img { width: 100px; margin-bottom: 10px; }
-.card h3 { margin-bottom: 10px; }
+.card img { width:120px; margin-bottom:12px; }
+.card h2 { margin-bottom:15px; font-size:1.6rem; }
 
 /* ألوان مميزة لكل بطاقة */
-.stages-card { border-top: 5px solid #F4D03F; }
-.songs-card { border-top: 5px solid #9B59B6; }
-.games-card { border-top: 5px solid #1ABC9C; }
-.innovation-card { border-top: 5px solid #E67E22; }
-.releases-card { border-top: 5px solid #3498DB; }
-.online-card { border-top: 5px solid #E74C3C; }
+.stages-card { border-top: 6px solid #F4D03F; }
+.songs-card { border-top: 6px solid #9B59B6; }
+.games-card { border-top: 6px solid #1ABC9C; }
+.innovation-card { border-top: 6px solid #E67E22; }
+.releases-card { border-top: 6px solid #3498DB; }
+.online-card { border-top: 6px solid #E74C3C; }
 
-/* أزرار البطاقات بألوان مختلفة */
-.stages-card .btn-group button { background-color: #F4D03F; color: #000; border: 1px solid #F1C40F; }
-.songs-card .btn-group button { background-color: #9B59B6; color: #fff; border: 1px solid #8E44AD; }
-.games-card .btn-group button { background-color: #1ABC9C; color: #fff; border: 1px solid #16A085; }
-.innovation-card .btn-group button { background-color: #E67E22; color: #fff; border: 1px solid #D35400; }
-.releases-card .btn-group button { background-color: #3498DB; color: #fff; border: 1px solid #2980B9; }
-.online-card .btn-group button { background-color: #E74C3C; color: #fff; border: 1px solid #C0392B; }
+/* أزرار أكبر لكل بطاقة */
+.btn-group {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    margin-top:10px;
+}
+
+.btn-group button {
+    padding: 12px 18px;
+    font-size:1.1rem; /* أكبر حجم */
+    border-radius:8px;
+    border:none;
+    cursor:pointer;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* ألوان مختلفة للأزرار */
+.stages-card .btn-group button { background-color: #F4D03F; color:#000; border: 1px solid #F1C40F; }
+.songs-card .btn-group button { background-color: #9B59B6; color:#fff; border: 1px solid #8E44AD; }
+.games-card .btn-group button { background-color: #1ABC9C; color:#fff; border: 1px solid #16A085; }
+.innovation-card .btn-group button { background-color: #E67E22; color:#fff; border: 1px solid #D35400; }
+.releases-card .btn-group button { background-color: #3498DB; color:#fff; border: 1px solid #2980B9; }
+.online-card .btn-group button { background-color: #E74C3C; color:#fff; border: 1px solid #C0392B; }
 
 /* Hover على الأزرار */
-.btn-group button:hover { transform: scale(1.05); opacity: 0.85; cursor: pointer; }
+.btn-group button:hover {
+    transform: scale(1.1);
+    opacity:0.85;
+}
 
 /* Footer */
 footer {
-    background-color: #3C0B94;
+    background-color:#3C0B94;
     color: yellow;
     text-align: center;
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
 footer a {
-    display: block;
-    margin: 5px;
+    display:block;
+    margin: 6px;
     color: yellow;
-    text-decoration: none;
+    text-decoration:none;
 }
 
-footer a:hover { color: #BCC707; }
+footer a:hover { color:#BCC707; }
 
 /* ===== Responsive ===== */
-@media (max-width: 768px) {
-    .site-header { flex-direction: column; text-align: center; }
-    .header-left .logo { margin-bottom: 10px; }
-    .cards-section { grid-template-columns: 1fr; }
-    .btn-group { flex-direction: column; }
+@media(max-width:768px){
+    .site-header{flex-direction:column; text-align:center;}
+    .header-left .logo{margin-bottom:10px;}
+    .cards-section{grid-template-columns:1fr;}
+    .btn-group{flex-direction:column;}
 }
