@@ -5,6 +5,7 @@ body {
     font-family: "Lucida Grande", Verdana, sans-serif;
     background-color: #F0F5F9;
     line-height:1.5;
+    direction: rtl; /* من اليمين لليسار */
 }
 
 /* ===== الترويسة ===== */
@@ -18,7 +19,7 @@ body {
 }
 
 .header-left .logo {
-    width: 180px; /* أكبر من النسخة السابقة */
+    width: 180px;
 }
 
 .header-right nav {
@@ -26,12 +27,12 @@ body {
 }
 
 .header-right nav a {
-    margin-left: 10px;
-    padding: 10px 18px; /* أكبر */
+    margin-right: 10px; /* RTL */
+    padding: 12px 22px;
     background-color: #78CB0B;
     color: #fff;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 50px; /* ملفوفة بالكامل */
     font-size: 1.2rem;
     transition: all 0.3s;
 }
@@ -40,24 +41,24 @@ body {
 
 .header-right p {
     font-weight:bold;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 /* ===== Cards Section ===== */
 .cards-section {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    gap: 25px;
+    gap: 30px;
     padding: 2rem;
 }
 
 /* بطاقات عامة */
 .card { 
     background-color: #fff;
-    border-radius: 12px;
-    padding: 1.5rem;
+    border-radius: 15px;
+    padding: 2rem;
     text-align: center;
-    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -66,8 +67,8 @@ body {
     box-shadow: 0 12px 18px rgba(0,0,0,0.25);
 }
 
-.card img { width:120px; margin-bottom:12px; }
-.card h2 { margin-bottom:15px; font-size:1.6rem; }
+.card img { width:140px; margin-bottom:15px; }
+.card h2 { margin-bottom:20px; font-size:1.8rem; }
 
 /* ألوان مميزة لكل بطاقة */
 .stages-card { border-top: 6px solid #F4D03F; }
@@ -77,19 +78,19 @@ body {
 .releases-card { border-top: 6px solid #3498DB; }
 .online-card { border-top: 6px solid #E74C3C; }
 
-/* أزرار أكبر لكل بطاقة */
+/* أزرار أكبر وحواف ملفوفة */
 .btn-group {
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
-    gap:10px;
-    margin-top:10px;
+    gap:12px;
+    margin-top:15px;
 }
 
 .btn-group button {
-    padding: 12px 18px;
-    font-size:1.1rem; /* أكبر حجم */
-    border-radius:8px;
+    padding: 14px 25px;
+    font-size:1.3rem; /* أكبر خط */
+    border-radius: 50px; /* حواف ملفوفة */
     border:none;
     cursor:pointer;
     transition: transform 0.3s, opacity 0.3s;
@@ -103,7 +104,6 @@ body {
 .releases-card .btn-group button { background-color: #3498DB; color:#fff; border: 1px solid #2980B9; }
 .online-card .btn-group button { background-color: #E74C3C; color:#fff; border: 1px solid #C0392B; }
 
-/* Hover على الأزرار */
 .btn-group button:hover {
     transform: scale(1.1);
     opacity:0.85;
